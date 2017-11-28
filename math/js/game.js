@@ -6,8 +6,7 @@ var game = function() {
     
 
     function printGame() {
-        var op = document.getElementById('operator').value;
-        console.log(op);
+        var op = getOperator();
         player.logPlayer();
     
         // determine the number of problems to show
@@ -18,7 +17,7 @@ var game = function() {
         for (var i = 1; i <= problemsPerGame; i++) {
             gameForm += '<div class="form-group">';
             gameForm += '<label for="answer' + i + '" class="col-sm-2 control-label">';
-            gameForm += factorElement.value + ' x ' + i + ' = </label>';
+            gameForm += factorElement.value + op + i + ' = </label>';
             gameForm += '<div class="col-sm-1"><input type="text" class="form-control" id="answer' + i + '" size="5" /></div>';
             gameForm += '</div>';
         }
@@ -31,15 +30,17 @@ var game = function() {
         document.getElementById('calculate').removeAttribute('disabled');
     }
     
-    function calculateScore() {
-    
+    function calculateScore() {    
         var problemsInGame = getProblemCount();
         var score = 0;
+        var op = getOperator();
     
         // loop through the text boxes and calculate the number that are correct
+        var problem = 0;
         for (var i = 1; i <= problemsInGame; i++) {
             var answer = document.getElementById('answer' + i).value;
-            if(i * factorElement.value == answer) {
+            problem = parseFloat(Math.fround(eval(factorElement.value + op + i)).toFixed(2));
+            if(problem == answer) {
                 score++;
             }
         }
@@ -67,6 +68,10 @@ var game = function() {
     
     function getProblemCount() {
         return problemsPerGame;
+    }
+
+    function getOperator(){
+        return document.getElementById('operator').value;
     }
     
     // public members

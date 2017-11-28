@@ -1,6 +1,6 @@
 (function() {
     
-    console.log('Starting MultiMath with an IIFE');
+    console.log('Starting MultiMath IIFE');
     
     // add click handler to the start game button
     document.getElementById('startGame').addEventListener('click', function() {
