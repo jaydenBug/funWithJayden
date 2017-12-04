@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="css/united.bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="./css/site.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Fun with Jayden</title>
 </head>
-<body>
+<body onload="start();">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -34,11 +35,39 @@
     </nav>
     
     <div class="container">
-        <h3>This is jaydens starting website so he can have some fun</h3>       
+        <h2 class="text">This is the home of</h2>
         
+        <ul class="fly-in hidden">
+            <li>J</li>
+            <li>A</li>
+            <li>Y</li>
+            <li>D</li>
+            <li>E</li>
+            <li>N</li>
+            <li></li>
+            <li>S</li>
+            <li>H</li>
+            <li>O</li>
+            <li>K</li>
+            <li>R</li>
+            <li>G</li>
+            <li>O</li>
+            <li>Z</li>
+            <li>A</li>
+            <li>R</li>
+        </ul>        
     </div>
     <div class="footer">
         <p>Started by Papa and improved by munchkin!!</p>
-    </div> 
+    </div>
+    <script>
+        function start(){
+            setTimeout(function() {
+                var el = document.querySelector(".fly-in");
+                console.log(el);                
+                el.classList.remove("hidden");
+            }, 700);
+        };
+    </script>
 </body>
 </html>
