@@ -31,33 +31,33 @@
     transform: translateX(-50%) translateY(-50%);
 }
 .fly-in li {
-    display: inline-block;
-    margin-right: 30px;
-    font-family: sans-serif,helvetica;
-    font-weight: 300;
-    font-size: 28px;
-    color: #e7e7e7;
-    opacity: 1;
-    transition: all 2.8s cubic-bezier(0.6, -.005, 0.32, 1.75);
-}
+        display: inline-block;
+        margin-right: 30px;
+        font-family: sans-serif,helvetica;
+        font-weight: 300;
+        font-size: 28px;
+        color: #e7e7e7;
+        opacity: 1;
+        transition: all 2.8s cubic-bezier(0.6, -.005, 0.32, 1.75);
+    }
 .fly-in.hidden li {
-    opacity: 0;
-}
+        opacity: 0;
+    }
 .fly-in.hidden li:nth-child(1) {
-    transform: translateX(150px) translateY(-170px); 
-}
+        transform: translateX(150px) translateY(-170px); 
+    }
 .fly-in.hidden li:nth-child(2) {
-    transform: translateX(-210px) translateY(170px); 
-}
+        transform: translateX(-210px) translateY(170px); 
+    }
 .fly-in.hidden li:nth-child(3) {
-    transform: translateX(20px) translateY(-100px); 
-}
+        transform: translateX(20px) translateY(-100px); 
+    }
 .fly-in.hidden li:nth-child(4) {
-    transform: translateX(-100px) translateY(-20px); 
-}
+        transform: translateX(-100px) translateY(-20px); 
+    }
 .fly-in.hidden li:nth-child(5) {
-    transform: translateX(-70px) translateY(-200px); 
-}
+        transform: translateX(-70px) translateY(-200px); 
+    }
 .fly-in.hidden li:nth-child(6) {
     transform: translateX(200px) translateY(70px); 
 }
